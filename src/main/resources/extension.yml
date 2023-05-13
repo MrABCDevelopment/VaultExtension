@@ -1,0 +1,4 @@
+name: VaultExtension
+main: me.dreamdevs.github.vaultextension.VaultExtension
+version: 1.0.0
+author: DreamDevs
