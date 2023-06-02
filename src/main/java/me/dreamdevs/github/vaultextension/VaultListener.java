@@ -14,7 +14,13 @@ public class VaultListener implements Listener {
         RandomMoney randomMoney = VaultExtension.instance.getVaultManager().getChestsValues().get(event.getChestGame().getId());
         int money = randomMoney.getRandomMoney();
         VaultExtension.ECONOMY.depositPlayer(event.getPlayer(), money);
-        event.getPlayer().sendMessage(RandomLootChestMain.getInstance().getMessagesManager().getMessages().get("found-money").replaceAll("%MONEY%", String.valueOf(money)));
+        if(money == 0) {
+            event.getPlayer().sendMessage(RandomLootChestMain.getInstance().getMessagesManager().getMessages().get("nothing-found"));
+        } else if (money > 0) {
+            event.getPlayer().sendMessage(RandomLootChestMain.getInstance().getMessagesManager().getMessages().get("found-money").replaceAll("%MONEY%", String.valueOf(money)));
+        } else {
+            event.getPlayer().sendMessage(RandomLootChestMain.getInstance().getMessagesManager().getMessages().get("lost-money").replaceAll("%MONEY%", String.valueOf(money)));
+        }
     }
 
 }

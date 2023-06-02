@@ -1,4 +1,6 @@
 Messages:
-  Money-Found: '&aYou found %MONEY%$!'
+  Nothing-Found: '&7Sorry, but you found nothing...'
+  Money-Found: '&aYou found %MONEY%$ in this chest!'
+  Money-Lost: '&cYou lost %MONEY%$ in this chest!'
 Chests:
   default: 0;10

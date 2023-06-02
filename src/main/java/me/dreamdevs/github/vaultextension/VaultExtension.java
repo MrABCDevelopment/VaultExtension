@@ -24,13 +24,17 @@ public class VaultExtension extends Extension {
             Util.sendPluginMessage("&cVault Extension could not hook with Vault, so there might be a problem...");
             return;
         }
-        RandomLootChestMain.getInstance().getMessagesManager().getMessages().put("found-money", ColourUtil.colorize(getConfig().getString("Messages.Money-Found")));
+        RandomLootChestMain.getInstance().getMessagesManager().addMessage("found-money", ColourUtil.colorize(getConfig().getString("Messages.Money-Found")));
+        RandomLootChestMain.getInstance().getMessagesManager().addMessage("nothing-found", ColourUtil.colorize(getConfig().getString("Messages.Nothing-Found")));
+        RandomLootChestMain.getInstance().getMessagesManager().addMessage("lost-money", ColourUtil.colorize(getConfig().getString("Messages.Money-Lost")));
         registerListener(new VaultListener());
         Util.sendPluginMessage("&aLoaded all variables and setup VaultExtension!");
     }
 
     @Override
-    public void onExtensionDisable() {}
+    public void onExtensionDisable() {
+
+    }
 
     private boolean setupEconomy() {
         if (getServer().getPluginManager().getPlugin("Vault") == null) {
