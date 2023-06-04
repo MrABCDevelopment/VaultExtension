@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0423e1c0-d186-4834-b208-f837d27f9b83" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/dreamdevs/github/vaultextension/VaultExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dreamdevs/github/vaultextension/VaultExtension.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dreamdevs/github/vaultextension/RandomMoney.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dreamdevs/github/vaultextension/RandomMoney.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/dreamdevs/github/vaultextension/VaultListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dreamdevs/github/vaultextension/VaultListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/dreamdevs/github/vaultextension/VaultManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/dreamdevs/github/vaultextension/VaultManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/extension.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/extension.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -19,7 +19,7 @@ public class VaultManager
         ConfigurationSection section = config.getConfigurationSection("Chests");
         for(String key : section.getKeys(false)) {
             String[] strings = section.getString(key).split(";");
-            RandomMoney randomMoney = new RandomMoney(Integer.parseInt(strings[0]), Integer.parseInt(strings[1]));
+            RandomMoney randomMoney = new RandomMoney(Integer.parseInt(strings[0]), Integer.parseInt(strings[1]), Double.parseDouble(strings[2]));
             chestsValues.putIfAbsent(key, randomMoney);
         }
     }

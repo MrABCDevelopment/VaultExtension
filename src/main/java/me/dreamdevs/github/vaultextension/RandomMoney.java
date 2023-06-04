@@ -10,6 +10,7 @@ public class RandomMoney {
 
     private final int min;
     private final int max;
+    private final double chance;
 
     public int getRandomMoney() {
         return ThreadLocalRandom.current().nextInt(min, max);
