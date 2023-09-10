@@ -1,0 +1,17 @@
+
+i
+java:S1104"SMake ECONOMY a static final constant or non-public and provide accessors if needed.(ûÚ¥ž
+o
+java:S1104"TMake instance a static final constant or non-public and provide accessors if needed.(êŠÃ¾ÿÿÿÿÿ
+C
+java:S1444"-Make this "public static ECONOMY" field final(ûÚ¥ž
+I
+java:S1444".Make this "public static instance" field final(êŠÃ¾ÿÿÿÿÿ
+h
+java:S3008"RRename this field "ECONOMY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÚ¥ž
+—
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(åÆÙÀ
+Q
+java:S2696"6Make the enclosing method "static" or remove this set.(ñõîÙþÿÿÿÿ
+Q
+java:S2696:"6Make the enclosing method "static" or remove this set.(ŠéçÄúÿÿÿÿ

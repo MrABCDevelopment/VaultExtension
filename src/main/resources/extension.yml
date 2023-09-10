@@ -1,5 +1,5 @@
-name: VaultExtension
-main: me.dreamdevs.github.vaultextension.VaultExtension
-version: 1.1.0
+name: ${project.artifactId}
+main: me.dreamdevs.vaultextension.VaultExtension
+version: ${project.version}
 author: DreamDevs
 icon: SUNFLOWER
