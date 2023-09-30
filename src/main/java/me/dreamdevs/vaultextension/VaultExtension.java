@@ -2,8 +2,7 @@ package me.dreamdevs.vaultextension;
 
 import me.dreamdevs.randomlootchest.RandomLootChestMain;
 import me.dreamdevs.randomlootchest.api.extensions.Extension;
-import me.dreamdevs.randomlootchest.utils.ColourUtil;
-import me.dreamdevs.randomlootchest.utils.Util;
+import me.dreamdevs.randomlootchest.api.utils.Util;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.plugin.RegisteredServiceProvider;
 
@@ -42,9 +41,6 @@ public class VaultExtension extends Extension {
 
     private void setup() {
         vaultManager = new VaultManager(this);
-        RandomLootChestMain.getInstance().getMessagesManager().addMessage("found-money", ColourUtil.colorize(getConfig().getString("Messages.Money-Found")));
-        RandomLootChestMain.getInstance().getMessagesManager().addMessage("nothing-found", ColourUtil.colorize(getConfig().getString("Messages.Nothing-Found")));
-        RandomLootChestMain.getInstance().getMessagesManager().addMessage("lost-money", ColourUtil.colorize(getConfig().getString("Messages.Money-Lost")));
         registerListener(new VaultListener());
         Util.sendPluginMessage("&aLoaded all variables and setup VaultExtension!");
     }

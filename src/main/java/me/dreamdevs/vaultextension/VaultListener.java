@@ -1,8 +1,7 @@
 package me.dreamdevs.vaultextension;
 
-import me.dreamdevs.randomlootchest.RandomLootChestMain;
 import me.dreamdevs.randomlootchest.api.events.ChestOpenEvent;
-import me.dreamdevs.randomlootchest.utils.Util;
+import me.dreamdevs.randomlootchest.api.utils.Util;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 
@@ -20,11 +19,11 @@ public class VaultListener implements Listener {
             double money = randomMoney.getRandomMoney();
             VaultExtension.ECONOMY.depositPlayer(event.getPlayer(), round(money));
             if (money == 0) {
-                event.getPlayer().sendMessage(RandomLootChestMain.getInstance().getMessagesManager().getMessages().get("nothing-found"));
+                event.getPlayer().sendMessage(VaultManager.MESSAGE_NOTHING_FOUND);
             } else if (money > 0) {
-                event.getPlayer().sendMessage(RandomLootChestMain.getInstance().getMessagesManager().getMessages().get("found-money").replaceAll("%MONEY%", String.valueOf(money)));
+                event.getPlayer().sendMessage(VaultManager.MESSAGE_MONEY_FOUND.replace("%MONEY%", String.valueOf(money)));
             } else {
-                event.getPlayer().sendMessage(RandomLootChestMain.getInstance().getMessagesManager().getMessages().get("lost-money").replaceAll("%MONEY%", String.valueOf(money)));
+                event.getPlayer().sendMessage(VaultManager.MESSAGE_MONEY_LOST.replace("%MONEY%", String.valueOf(money)));
             }
         }
     }
