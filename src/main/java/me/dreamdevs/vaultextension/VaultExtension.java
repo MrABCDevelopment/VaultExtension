@@ -1,8 +1,10 @@
 package me.dreamdevs.vaultextension;
 
-import me.dreamdevs.randomlootchest.RandomLootChestMain;
+import lombok.Getter;
 import me.dreamdevs.randomlootchest.api.extensions.Extension;
 import me.dreamdevs.randomlootchest.api.utils.Util;
+import me.dreamdevs.vaultextension.listeners.VaultListener;
+import me.dreamdevs.vaultextension.managers.VaultManager;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.plugin.RegisteredServiceProvider;
 
@@ -12,7 +14,7 @@ public class VaultExtension extends Extension {
 
     public static Economy ECONOMY;
     public static VaultExtension instance;
-    private VaultManager vaultManager;
+    private @Getter VaultManager vaultManager;
 
     @Override
     public void onExtensionEnable() {
@@ -57,7 +59,4 @@ public class VaultExtension extends Extension {
         return ECONOMY != null;
     }
 
-    public VaultManager getVaultManager() {
-        return vaultManager;
-    }
 }

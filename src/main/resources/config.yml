@@ -2,6 +2,11 @@ Messages:
   Nothing-Found: '&7Sorry, but you found nothing...'
   Money-Found: '&aYou found %MONEY%$ in this chest!'
   Money-Lost: '&cYou lost %MONEY%$ in this chest!'
+  Broadcast-Found: '&6&l! &e%PLAYER% &afound &e%MONEY%!'
+
+Broadcast:
+  Use: true
+  Min-Money-To-Display: 50.0
 
 Chests:
   default: 0.0;10.0;0.5

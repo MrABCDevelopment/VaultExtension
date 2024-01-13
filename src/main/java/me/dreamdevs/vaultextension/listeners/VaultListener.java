@@ -1,7 +1,11 @@
-package me.dreamdevs.vaultextension;
+package me.dreamdevs.vaultextension.listeners;
 
 import me.dreamdevs.randomlootchest.api.events.ChestOpenEvent;
 import me.dreamdevs.randomlootchest.api.utils.Util;
+import me.dreamdevs.vaultextension.RandomMoney;
+import me.dreamdevs.vaultextension.VaultExtension;
+import me.dreamdevs.vaultextension.managers.VaultManager;
+import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 
@@ -21,9 +25,13 @@ public class VaultListener implements Listener {
             if (money == 0) {
                 event.getPlayer().sendMessage(VaultManager.MESSAGE_NOTHING_FOUND);
             } else if (money > 0) {
-                event.getPlayer().sendMessage(VaultManager.MESSAGE_MONEY_FOUND.replace("%MONEY%", String.valueOf(money)));
+                event.getPlayer().sendMessage(VaultManager.MESSAGE_MONEY_FOUND.replace("%MONEY%", String.valueOf(round(money))));
             } else {
-                event.getPlayer().sendMessage(VaultManager.MESSAGE_MONEY_LOST.replace("%MONEY%", String.valueOf(money)));
+                event.getPlayer().sendMessage(VaultManager.MESSAGE_MONEY_LOST.replace("%MONEY%", String.valueOf(round(money))));
+            }
+
+            if (VaultManager.BROADCAST_ON_FOUND && money >= VaultManager.BROADCAST_AMOUNT) {
+                Bukkit.broadcastMessage(VaultManager.BROADCAST_MESSAGE.replace("%PLAYER%", event.getPlayer().getName()).replace("%MONEY%", String.valueOf(round(money))));
             }
         }
     }
