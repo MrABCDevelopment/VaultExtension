@@ -36,7 +36,6 @@ public class VaultManager {
         MESSAGE_NOTHING_FOUND = ColourUtil.colorize(config.getString("Messages.Nothing-Found"));
         MESSAGE_MONEY_FOUND = ColourUtil.colorize(config.getString("Messages.Money-Found"));
         MESSAGE_MONEY_LOST = ColourUtil.colorize(config.getString("Messages.Money-Lost"));
-        MENU_TITLE_MAIN = ColourUtil.colorize(config.getString("Messages.Menu-Title-Main"));
         BROADCAST_MESSAGE = ColourUtil.colorize(config.getString("Messages.Broadcast-Found"));
 
         BROADCAST_AMOUNT = config.getDouble("Broadcast.Min-Money-To-Display");
